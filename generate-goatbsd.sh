@@ -11,9 +11,7 @@ fi
 echo "Welcome to the Goat-BSD Generator , we are gonna create your iso in a giffy !"
 echo "But first be sure to Subscribe to my Channel Switched2BSD on YouTube plz !"
 echo ".........................."
-echo " lets install wget "
-doas pkg install -y wget
-echo " lets create our work directory goat-bsd on home directory ! "
+echo " lets create our work directory goat-bsd on root /root directory ! "
 echo " Don't forget that you need to be root to delete this directory later !"
 mkdir ~/goat-bsd
 echo "Lets create the core directory now where all the work will be done there"
@@ -26,8 +24,8 @@ echo " Lets switch to goat-bsd temp directory now"
 cd ~/goat-bsd/temp
 echo " lets try to download the base and kernel to create a pristine freebsd system root"
 echo " For FreeBSD "$(uname -r) 
-wget https://download.freebsd.org/releases/amd64/$(uname -r)/base.txz
-wget https://download.freebsd.org/releases/amd64/$(uname -r)/kernel.txz
+fetch https://download.freebsd.org/releases/amd64/$(uname -r)/base.txz
+fetch https://download.freebsd.org/releases/amd64/$(uname -r)/kernel.txz
 echo " Download complete ! lets extract them now ! "
 echo " You have plenty of time to Subscribe to Switched2BSD on YouTube "
 tar -zxvf base.txz -C ~/goat-bsd/core
