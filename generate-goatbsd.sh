@@ -20,6 +20,9 @@ echo " Let's create the iso output directory now iso"
 mkdir ~/goat-bsd/iso
 echo " Let's create the temp(orary) directory now"
 mkdir ~/goat-bsd/temp
+echo " Let' create the sceleton directory its gonna have the pristine boot system without any goodies"
+mkdir ~/goat-bsd/sceleton
+
 echo " Lets switch to goat-bsd temp directory now"
 cd ~/goat-bsd/temp
 echo " lets try to download the base and kernel to create a pristine freebsd system root"
