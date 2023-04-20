@@ -47,7 +47,9 @@ chmod +x ~/goat-bsd/core/freebsd-desktop-installer-git
 chroot ~/goat-bsd/core chmod +x freebsd-desktop-installer-git
 echo " Let's Go ! Let's install some stuff now ! "
 chroot ~/goat-bsd/core ./freebsd-desktop-installer-git
+clear
 echo " ok installation should be complete now lets compress the whole thing now"
-
-
+echo " it will take a LOT OF TIME !!!! ONE HELL OF A LOT OF TIME"
+cd ~/goat-bsd/
+doas nice -20 tar --zstd -cf fullsystem.tar.zst  --options zstd:compression-level=22,zstd:threads=0  ~/goat-bsd/core/
 
