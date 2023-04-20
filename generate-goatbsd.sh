@@ -33,5 +33,21 @@ echo " Download complete ! lets extract them now ! "
 echo " You have plenty of time to Subscribe to Switched2BSD on YouTube "
 tar -zxvf base.txz -C ~/goat-bsd/core
 tar -zxvf kernel.txz -C ~/goat-bsd/core
+echo " lets copy the pristine system to sceleton"
+cp -r ~/goat-bsd/core/ ~/goat-bsd/sceleton/
 echo "decompression complete , now lets install some packages"
+mkdir ~/goat-bsd/core/var/cache/pkg
+mount -t devfs devfs ~/goat-bsd/core/dev
+cp /etc/resolv.conf ~/goat-bsd/core/etc/
+echo "mounted devfs on virtual root and copied resolv for temporarilly network access will delete it later"
+echo "Just say yes to install pkg ok ?"
+chroot ~/goat-bsd/core/ pkg install -y wget
+chroot ~/goat-bsd/core/ wget tinyurl.com/freebsd-desktop-installer-git
+chmod +x ~/goat-bsd/core/freebsd-desktop-installer-git
+chroot ~/goat-bsd/core chmod +x freebsd-desktop-installer-git
+echo " Let's Go ! Let's install some stuff now ! "
+chroot ~/goat-bsd/core ./freebsd-desktop-installer-git
+echo " ok installation should be complete now lets compress the whole thing now"
+
+
 
