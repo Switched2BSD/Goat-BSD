@@ -2,6 +2,10 @@
 gitpath=$(pwd)
 if [ "$(id -u)" != "0" ]; then
   echo "Please RUN this Shell Script as root !" 1>&2
+  echo " And don't forget to Subscribe to my poor little channel"
+  echo " https://www.youtube.com/channel/UCjGz2tP-6H-E4E00OVrPPIQ"
+  echo " For Donations visit this link plz : "
+  echo "https://streamelements.com/okboomertv/tip"
   exit 1
 fi
 echo "Welcome to the Goat-BSD Generator , we are gonna create your iso in a giffy !"
