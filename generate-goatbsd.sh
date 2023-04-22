@@ -1,4 +1,6 @@
 #!/bin/sh
+## I HAVEN'T FINISHED THIS SCRIPT SO IT DOESN'T CREATE YET ANYTHING !!!
+#
 gitpath=$(pwd)
 if [ "$(id -u)" != "0" ]; then
   echo "Please RUN this Shell Script as root !" 1>&2
